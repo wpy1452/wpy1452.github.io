@@ -1,19 +1,72 @@
-﻿<!DOCTYPE html>
-<html lang="en" >
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Happy Lantern Festival</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            background-image: url(image/2.jpg);
+            background-size: cover; /* 保持背景图片覆盖整个窗口 */
+            background-color: rgb(24, 75, 103);
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+        }
 
-<link rel="stylesheet" href="css/style.css">
+        .left-text,
+        .right-text {
+            font-style: italic;
+            font-size: 100px;
+            width: 30%;
+            text-align: center;
+        }
 
+        img {
+            width: 36%;
+            height: auto;
+        }
+
+        .star {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-image: url('images/star.png');
+            background-size: cover;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="left-text">爱<br>你<br>永<br>远</div>
+    <img src="image/1.jpg" alt="">
+    <div class="right-text">独<br>家<br>播<br>放</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const numStars = 50;
 
-<div id="canvas-wrapper" aria-label="floating"></div>
+            for (let i = 0; i < numStars; i++) {
+                createStar();
+            }
 
-<script src='js/three.min.js'></script>
-<script src='js/TweenMax.min.js'></script>
-<script src="js/script.js"></script>
-
+            function createStar() {
+                const star = document.createElement("div");
+                star.className = "star";
+                star.style.left = `${Math.random() * 20}px`;
+                star.style.top = `${Math.random() * 20}px`;
+                document.body.appendChild(star);
+            }
+        });
+    </script>
 </body>
 </html>
