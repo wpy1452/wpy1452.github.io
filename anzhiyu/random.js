@@ -1,4 +1,4 @@
-var posts=["2026/02/23/2026-02-23/","2026/02/24/asdaw/","2026/02/24/hello-world/","2026/02/24/das/"];function toRandomPost(){
+var posts=["2026/02/24/asdaw/","2026/02/23/2026-02-23/","2026/02/24/das/","2026/02/24/hello-world/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };var friend_link_list=[{"name":"Hexo","link":"https://hexo.io/zh-tw/","avatar":"https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg","descr":"快速、简单且强大的网站框架"},{"name":"anzhiyu主题","link":"https://hexo.anheyu.com/","avatar":"https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg","descr":"生活明朗，万物可爱"},{"name":"Twikoo","link":"https://twikoo.js.org/","avatar":"https://twikoo.js.org/img/logo.png","descr":"一款轻量、快速、功能强大的无后端评论系统"},{"name":"安知鱼","link":"https://hexo.anheyu.com/","avatar":"https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg","descr":"生活明朗，万物可爱","siteshot":"https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/anzhiy.cn.jpg","color":"vip","tag":"技术"}];
     var refreshNum = 1;
